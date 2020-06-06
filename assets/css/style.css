@@ -1,0 +1,69 @@
+body {
+    background-color: lightgray;
+    padding: 20px;
+}
+
+.board {
+    background: rgb(233, 173, 173);
+    position: relative;
+    width: 1000px;
+    height: 500px;
+}
+
+.player {
+    background: white;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 0px;
+    top: 0px
+}
+
+#obstacle1 {
+    background: rgb(122, 150, 158);
+    position: absolute;
+    left: 200px;
+    top: 0;
+    height: 300px;
+    width: 20px;
+}
+#obstacle2 {
+    background: rgb(122, 150, 158);
+    position: absolute;
+    left: 400px;
+    top: 0;
+    height: 300px;
+    width: 20px;
+}
+#obstacle3 {
+    background: rgb(122, 150, 158);
+    position: absolute;
+    left: 600px;
+    top: 0;
+    height: 300px;
+    width: 20px;
+}
+#obstacle4 {
+    background: rgb(122, 150, 158);
+    position: absolute;
+    left: 100px;
+    bottom: 0;
+    height: 300px;
+    width: 20px;
+}
+#obstacle5 {
+    background: rgb(122, 150, 158);
+    position: absolute;
+    left: 300px;
+    bottom: 0;
+    height: 300px;
+    width: 20px;
+}
+#obstacle6 {
+    background: rgb(122, 150, 158);
+    position: absolute;
+    left: 700px;
+    bottom: 0;
+    height: 300px;
+    width: 20px;
+}
