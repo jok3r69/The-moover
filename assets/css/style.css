@@ -19,7 +19,7 @@ body {
     top: 0px
 }
 
-#obstacle1 {
+.obstacle1 {
     background: rgb(122, 150, 158);
     position: absolute;
     left: 200px;
@@ -27,7 +27,7 @@ body {
     height: 300px;
     width: 20px;
 }
-#obstacle2 {
+.obstacle2 {
     background: rgb(122, 150, 158);
     position: absolute;
     left: 400px;
@@ -35,7 +35,7 @@ body {
     height: 300px;
     width: 20px;
 }
-#obstacle3 {
+.obstacle3 {
     background: rgb(122, 150, 158);
     position: absolute;
     left: 600px;
@@ -43,7 +43,7 @@ body {
     height: 300px;
     width: 20px;
 }
-#obstacle4 {
+.obstacle4 {
     background: rgb(122, 150, 158);
     position: absolute;
     left: 100px;
@@ -51,7 +51,7 @@ body {
     height: 300px;
     width: 20px;
 }
-#obstacle5 {
+.obstacle5 {
     background: rgb(122, 150, 158);
     position: absolute;
     left: 300px;
@@ -59,7 +59,7 @@ body {
     height: 300px;
     width: 20px;
 }
-#obstacle6 {
+.obstacle6 {
     background: rgb(122, 150, 158);
     position: absolute;
     left: 700px;
