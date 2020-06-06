@@ -17,6 +17,7 @@ class Obstacle {
 //all obscatles need to have 4 bounderies
 //
 const keyMap= {
+    TOP: 38,
     RIGHT: 39,
     BOTTOM: 40,
     LEFT: 37,

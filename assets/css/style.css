@@ -19,7 +19,7 @@ body {
     top: 0px
 }
 
-.obstacle1 {
+.obstacleTop {
     background: rgb(122, 150, 158);
     position: absolute;
     left: 200px;
@@ -27,23 +27,7 @@ body {
     height: 300px;
     width: 20px;
 }
-.obstacle2 {
-    background: rgb(122, 150, 158);
-    position: absolute;
-    left: 400px;
-    top: 0;
-    height: 300px;
-    width: 20px;
-}
-.obstacle3 {
-    background: rgb(122, 150, 158);
-    position: absolute;
-    left: 600px;
-    top: 0;
-    height: 300px;
-    width: 20px;
-}
-.obstacle4 {
+.obstacleBottom {
     background: rgb(122, 150, 158);
     position: absolute;
     left: 100px;
@@ -51,19 +35,28 @@ body {
     height: 300px;
     width: 20px;
 }
-.obstacle5 {
-    background: rgb(122, 150, 158);
-    position: absolute;
-    left: 300px;
-    bottom: 0;
-    height: 300px;
-    width: 20px;
+
+.obstacleTop:nth-child(5n+1) {
+    left: 400px;
 }
-.obstacle6 {
-    background: rgb(122, 150, 158);
-    position: absolute;
+.obstacleTop:nth-child(5n+2) {
+    left: 600px;
+}
+.obstacleTop:nth-child(5n+3) {
+    left: 800px;
+}
+.obstacleTop:nth-child(5n+4) {
+    left: 950px;
+}
+.obstacleBottom:nth-child(5n+1) {
+    left: 300px;
+}
+.obstacleBottom:nth-child(5n+2) {
+    left: 500px;
+}
+.obstacleBottom:nth-child(5n+3) {
     left: 700px;
-    bottom: 0;
-    height: 300px;
-    width: 20px;
+}
+.obstacleBottom:nth-child(5n+4) {
+    left: 900px;
 }
