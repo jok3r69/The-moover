@@ -10,6 +10,18 @@ body {
     height: 500px;
 }
 
+.live {
+    background-color: aqua;
+    width: 1000px;
+}
+.life {
+    /* display: flex;
+    justify-content: flex-end;
+    flex-direction: column; */
+    border-radius: 30px;
+    background-color: rgb(255, 7, 7);
+}
+
 .player {
     background: white;
     width: 20px;
