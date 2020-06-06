@@ -33,18 +33,18 @@ class Player {
     element = document.querySelector('.player');
     x= 0;
     y= 0;
-
+    
     //when new Player is called, `this` is created
     constructor() {
         //console.log(this.element)
         this._initMovement();
     }
-
+    
     _initMovement() {
         // console.log(this);
         document.addEventListener('keydown', this._hangleMovement.bind(this));
     }
-
+    
     _hangleMovement(event) {
         switch(event.keyCode) {
             case keyMap.TOP: {
@@ -65,10 +65,10 @@ class Player {
             }
         }
     }
-
+    
     moveTop() {
         const newY = this.y - PLAYER_MOVE_STEP;
-
+        
         if(this._isMoveInBounderies(this.x, newY)) {
             this.y = newY;
             this._updatePosition();            
@@ -99,26 +99,26 @@ class Player {
     _updatePosition() {
         this.element.style.top = `${this.y}px`;
         this.element.style.left = `${this.x}px`;
-
+        
     }
-
+    
     _isMoveInBounderies(x, y) {
-
+        
         if (y < 0) {
             return false;
         }
-
+        
         if(x < 0){
             return false;
         }
         if (x > MAP_WIDTH - PLAYER_WIDTH) {
             return false;
         }
-
+        
         if (y > MAP_HEIGHT - PLAYER_HEIGHT) {
             return false;
         }
-
+        
         return true;
     }
 }
@@ -127,22 +127,25 @@ const p1 = new Player();
 
 const obstacles = new Array();
 
-    for (i= 1; i < 7;  i++){
-        console.log("obstacle" + i);
-        obstacles[i] = new Obstacle("#obstacle" + i);
-    }
+elementTop = document.querySelectorAll('.obstacleTop');
+console.log(elementTop);
+
+// for (i= 1; i < 7;  i++){
+//     console.log("obstacle" + i);
+//     obstacles[i] = new Obstacle("#obstacle" + i);
+// }
 
 
 // const pl = {
-//     key: 'player',
-//     callMe: function() {
-//         console.log(this);
-//         return this;
-//     },
-// };
-
-// pl.callMe(); //pl -> this
-
+    //     key: 'player',
+    //     callMe: function() {
+        //         console.log(this);
+        //         return this;
+        //     },
+        // };
+        
+        // pl.callMe(); //pl -> this
+        
 // const doc = {
 // key: 'document'
 // };
