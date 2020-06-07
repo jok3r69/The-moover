@@ -4,13 +4,12 @@ class Obstacle {
     LEFT_BOUNDERIES = 0;
     RIGHT_BOUNDERIES = 0;
 
-    constructor(obstacle_id) {
-        element = document.getElementById(obstacle_id);
-        var rect = element.getBoundingClientRect();
-        TOP_BOUNDERIES = rect.top;
-        BOTTOM_BOUNDERIES = rect.bottom;
-        LEFT_BOUNDERIES = rect.left;
-        RIGHT_BOUNDERIES = rect.right;
+    constructor(obstacle) {
+        var rect = obstacle.getBoundingClientRect();
+        this.TOP_BOUNDERIES = rect.top;
+        this.BOTTOM_BOUNDERIES = rect.bottom;
+        this.LEFT_BOUNDERIES = rect.left;
+        this.RIGHT_BOUNDERIES = rect.right;
     }
 }
 //put the obtacles in an arrey
@@ -76,6 +75,14 @@ class Player {
     }
     moveRight() {
         const newX = this.x + PLAYER_MOVE_STEP;
+        for(var i = 0 ; i < 5; i++) {
+            var obs = obstacles[i];
+            if (newX >= obs.LEFT_BOUNDERIES -15 && newX <= obs.RIGHT_BOUNDERIES -15 && this.y<obs.BOTTOM_BOUNDERIES){
+                console.log('touched');
+                console.log(`bot:${obs.BOTTOM_BOUNDERIES} left:${obs.LEFT_BOUNDERIES} right:${obs.RIGHT_BOUNDERIES}`);
+                console.log(`player_x:${newX} player_y:${this.y}`);
+            }
+        };
         if(this._isMoveInBounderies(newX, this.y)) {
             this.x = newX;
             this._updatePosition();            
@@ -129,6 +136,11 @@ const obstacles = new Array();
 
 elementTop = document.querySelectorAll('.obstacleTop');
 console.log(elementTop);
+Array.from(elementTop).map(element => {
+    console.log(element);
+    const obj = new Obstacle(element);
+    obstacles[obstacles.length] = obj;
+});
 
 // for (i= 1; i < 7;  i++){
 //     console.log("obstacle" + i);
