@@ -5,7 +5,7 @@ class Obstacle {
     RIGHT_BOUNDERIES = 0;
 
     constructor(obstacle) {
-        var rect = obstacle.getBoundingClientRect();
+        const rect = obstacle.getBoundingClientRect();
         this.TOP_BOUNDERIES = rect.top;
         this.BOTTOM_BOUNDERIES = rect.bottom;
         this.LEFT_BOUNDERIES = rect.left;
